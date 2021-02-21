@@ -1,17 +1,9 @@
 test_color_name_to_hex (__main__.TestExercice) ... ok
-test_compute_mse (__main__.TestExercice) ... FAIL
+test_compute_mse (__main__.TestExercice) ... ok
 test_create_list (__main__.TestExercice) ... ok
 test_list_to_dict (__main__.TestExercice) ... ok
-
-======================================================================
-FAIL: test_compute_mse (__main__.TestExercice)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "test_exercice.py", line 65, in test_compute_mse
-    'Erreur dans le calcul des MSE'
-AssertionError: None is not an instance of <class 'dict'> : First argument is not a dictionary
 
 ----------------------------------------------------------------------
 Ran 4 tests in 0.005s
 
-FAILED (failures=1)
+OK
