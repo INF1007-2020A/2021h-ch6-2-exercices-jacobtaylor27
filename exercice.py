@@ -20,15 +20,12 @@ def create_list() -> list:
 
 def compute_mse(model_dict: dict) -> dict:
     # TODO: Calculer l'erreur quadratique moyen pour chaque modèle. Retourner un dictionnaire contenant les MSE.
-    l = list(model_dict.items())
-    # mse = 0
-    n = 0
-    for i in l:
-        # mse = (1/len(i[1])) * sum(i[1][i][0] - i[1][i][1])
-        print(i[1][n][0])
-        n += 1
-
-    # return {k: v for v,k in list(model_dict.items())}
+    for key, value in model_dict.items(): # key est la clé et value la valeur du dictionnaire
+        mse = 0
+        for e in value: # e est chaque tuple dans la liste des valeurs
+            mse += (e[1] - e[0])**2 # e à l'index 1 et l'index 0 sont les valeurs du modèle
+        model_dict[key] = mse / len(value)
+    return model_dict
 
 
 def main() -> None:
